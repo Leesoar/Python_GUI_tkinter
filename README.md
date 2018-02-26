@@ -10,16 +10,34 @@
 
 > Tk 有 3 种布局管理器来帮助控件集进行定位。 
 
-### Placer
+* *Placer*
 
 > 最原始的一种称为 Placer。它的做法非常直接：你提供控件的大小和摆放位置，然后管理器就会将其摆放好。问题是你必须对 所有控件进行这些操作，这样就会加重编程开发者的负担，因为这些操作本应该是自动完成的。
 
-### Packer
+* *Packer*
 
 > 这个命名十分恰当，因为它会把控件填充到正确的位置（即指定的父控件中），然后对于之后的每个控件，会去寻找剩余的空间
 进行填充。这个处理很像是旅行时往行李箱中填充行李的过程。 
 
-### Grid
+* *Grid*
 
 > 第三种布局管理器是 Grid。你可以基于网格坐标，使用 Grid 来指定 GUI 控件的放置。 Grid 会在它们的网格位置上渲染 GUI
  应用中的每个对象。
+
+### Packer的参数
+
+* fill
+
+fill 参数告诉 Packer 让所在标签/按钮占据剩余的水平空间/垂直空间。
+
+* expand
+
+expand 参数会引导使用fill的标签/按钮填充整个水平/垂直可视空间，将标签/按钮拉伸。
+
+**具体参考[**fill与expand演示**](https://github.com/Leesoar/Python_GUI_tkinter/blob/master/helloworld3.py)**
+
+## 其他控件
+
+* Scale
+
+**Scale 的使用方法详见[**Sacle与resize演示**](https://github.com/Leesoar/Python_GUI_tkinter/blob/master/helloworld3.py)**
