@@ -26,18 +26,18 @@
 
 ### Packer的参数
 
-* fill
+* *fill*
 
-fill 参数告诉 Packer 让所在标签/按钮占据剩余的水平空间/垂直空间。
+> fill 参数告诉 Packer 让所在标签/按钮占据剩余的水平空间/垂直空间。
 
-* expand
+* *expand*
 
-expand 参数会引导使用fill的标签/按钮填充整个水平/垂直可视空间，将标签/按钮拉伸。
+> expand 参数会引导使用fill的标签/按钮填充整个水平/垂直可视空间，将标签/按钮拉伸。
 
 **具体参考[**fill与expand演示**](https://github.com/Leesoar/Python_GUI_tkinter/blob/master/helloworld3.py)**
 
 ## 其他控件
 
-* Scale
+* *Scale*
 
 **Scale 的使用方法详见[**Sacle与resize演示**](https://github.com/Leesoar/Python_GUI_tkinter/blob/master/helloworld3.py)**
