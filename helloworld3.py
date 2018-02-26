@@ -11,13 +11,13 @@ top = Tk()
 top.geometry('250x150')     #定义顶层窗口大小为250*150
 
 label = Label(top, text='Hello World!', font='Helvetica -12 bold')
-label.pack(fill=Y, expand=1)               #fill 参数告诉 Packer 让 label 占据剩余的垂直空间，而 expand 参数则会引导它填充整个垂直可视空间，进行拉伸。
+label.pack(fill=Y, expand=1)               #fill 参数告诉 Packer 让 label 占据剩余的垂直空间，而 expand 参数则会引导它填充整个垂直可视空间，进行拉伸
 
 scale = Scale(top, from_=10, to=40, orient=HORIZONTAL, command=resize)      #比例大小范围为10到40，位置为水平的，命令为resize即调整label标签大小
 scale.set(12)        #设定应用启动的字体初始大小为12
 scale.pack(fill=X, expand=1)
 
-quit = Button(top, text='QUIT', command=top.quit, activeforeground='white', activebackground='red')   #设置按钮字体前景色为white，背景色为red
+quit = Button(top, text='QUIT', command=top.quit, activeforeground='white', activebackground='#878787')   #设置按钮前景色为white，背景色(按下后的颜色)为#878787
 quit.pack()
 
 mainloop()       #进入主循环
