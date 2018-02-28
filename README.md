@@ -43,4 +43,4 @@
 * *Directory Lister*
 > 这个应用是一个自己练手制作的简单目录遍历工具。它会从当前目录开始，提供一个文件列表。双击列表中任意其他目录，就会使得工具切换到新目录中，用新目录中的文件列表代替旧文件列表。 
 
-**下载地址：[Directory Lister](https://github.com/Leesoar/Python_GUI_tkinter/raw/master/listdir.exe)
+**点击此处下载至你的电脑：**[**Directory Lister**](https://github.com/Leesoar/Python_GUI_tkinter/raw/master/listdir.exe)
