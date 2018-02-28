@@ -16,16 +16,18 @@ class DirList(object):
 		self.label2 = Label(self.top, fg='#878787', font=('微软雅黑', 8,'bold'), text='Power by LeeTop-李腾科技') 
 		self.label2.pack()
 
-		self.cwd = StringVar(self.top)
+		self.cwd = StringVar(self.top)      #声明一个cwd变量用于保存当前所在的目录名
 
-		self.dirl = Label(self.top, fg='blue', font=('Helvetica', 12, 'bold'))
+		self.dirl = Label(self.top, fg='blue', font=('Helvetica', 12, 'bold'))      #用于显示当前的目录名
 		self.dirl.pack()
 
 		self.dirfm = Frame(self.top)
-		self.dirsb = Scrollbar(self.dirfm)
+		self.dirsb = Scrollbar(self.dirfm)        #列出的文件超过Listbox的大小时会出现滚动条
 		self.dirsb.pack(side=RIGHT, fill=Y)
-		self.dirs = Listbox(self.dirfm, height=15, width=50, yscrollcommand=self.dirsb.set)
-		self.dirs.bind('<Double-1>', self.setDirAndGo)
+		self.dirs = Listbox(self.dirfm, height=15, width=50, yscrollcommand=self.dirsb.set)     #列出目录的文件列表
+		self.dirs.bind('<Double-1>', self.setDirAndGo)             #将Listbox的列表项与回调函数setDirAndGo连接起来
+		#绑定意味着将一个回调函数与按键、鼠标操作或一些其他事件连接起来，当用户发起这类事件时，回调函数就会执行。
+		#当双击Listbox中的任意条目时，就会调用serDirAndGo()函数。而Scrollbar通过调用Scrollbar.config()方法与Listbox连接起来。
 		self.dirsb.config(command=self.dirs.yview)
 		self.dirs.pack(side=LEFT, fill=BOTH)
 		self.dirfm.pack()
@@ -56,8 +58,8 @@ class DirList(object):
 		check = self.dirs.get(self.dirs.curselection())
 		if not check:
 			check = os.curdir
-			self.cwd.set(check)
-			self.doLS()
+		self.cwd.set(check)
+		self.doLS()
 
 	def doLS(self, ev=None):
 		error = ''
